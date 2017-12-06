@@ -1,0 +1,25 @@
+{"elements": {
+    "Sessions":[
+      {
+        "url": "elements/current_session.html",
+        "height": 567,
+        "thumbnail": "elements/images/thumbs/current_session.png"
+      },
+      {
+        "url": "elements/scrolling_with_speakers.html",
+        "height": 567,
+        "thumbnail": "elements/images/thumbs/scrolling_with_speaker_pic.png"
+      },
+      {"url":"elements/current_with_speakers.html","height":1308, "thumbnail":"elements/images/thumbs/current_session_with_speakers.png"}
+    ],
+    "Social":[
+		{"url":"elements/twitter.html","height":877, "thumbnail":"elements/images/thumbs/twitter.png" }
+	],
+    "Announcements":[
+    	{"url":"elements/ticker.html","height":257, "thumbnail":"elements/images/thumbs/ticker.png"}
+    ],
+    "Static":[
+    	{"url":"elements/housekeeping.html","height":1308, "thumbnail":"elements/images/thumbs/housekeeping.png"}
+    ]
+    }
+}

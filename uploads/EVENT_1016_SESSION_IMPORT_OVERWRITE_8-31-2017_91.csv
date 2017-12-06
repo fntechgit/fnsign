@@ -1,0 +1,45 @@
+title,start_date,start_time,end_date,end_time,type,venue,speaker_name,speaker_company,speaker_image
+INTRODUCTION,8/31/17,10:00,8/31/17,10:20,Keynote,Level 2 - 220BC,Jay Parikh,Facebook,jayp.png
+DNA DATA STORAGE: BORROWING FROM NATURE TO BUILD BETTER COMPUTERS,8/31/17,10:20,8/31/17,10:40,Keynote,Level 2 - 220BC,Luis Ceze,University of Washington and Microsoft Research  ,luisc.png
+The journey of turning a CI system into a universal platform,8/31/17,10:50,8/31/17,11:30,Presentation,Level 2 - 210DH,Sergey Doroshenko:Adriana Liborno,Facebook:Facebook,sergeyd.png:adriana.png
+Google Translate: Breaking language barriers in emerging markets,8/31/17,10:50,8/31/17,11:30,Presentation,Level 2 - 210AE,Barak Turovsky,Google,barak.png
+Azure Data Lake Store,8/31/17,10:50,8/31/17,11:30,Presentation,Level 2 - 210CG,Raghu Ramakrishnan,Microsoft  ,raghu.png
+Building data-efficient AI algorithms with a dose of inspiration from the brain,8/31/17,10:50,8/31/17,11:30,Presentation,Level 2 - 210BF,Dileep George,Vicarious AI  ,dileep.png
+When all the world's data scientists are just not enough,8/31/17,11:40,8/31/17,12:20,Presentation,Level 2 - 210BF,Shubha Nabar,Salesforce,shubha.png
+LogDevice: A file-structured log system,8/31/17,11:40,8/31/17,12:20,Presentation,Level 2 - 210CG,Mark Marchukov,Facebook ,mark.png
+Building successful teams at scale,8/31/17,11:40,8/31/17,12:20,Panel,Level 2 - 210AE,Julia Grace:S. Soma Somasegar:Sri Viswanath:Julie Pearl:Nam Nguyen,Slack:Madrona Venture Group :Atlassian:Nest:Facebook,julia.png:soma.png:sri.png:julie.png:nam.png
+Inside the VS Code team: How a small team manages growth,8/31/17,11:40,8/31/17,12:20,Presentation,Level 2 - 210DH,Kai Maetzel,Microsoft  ,kai.png
+Bringing 360 to the world,8/31/17,13:20,8/31/17,14:00,Presentation,Level 2 - 210BF,Matt Uyttendaele,Facebook ,matt.png
+Resiliency testing with Toxiproxy,8/31/17,13:20,8/31/17,14:00,Presentation,Level 2 - 210DH,Simon Eskildsen,Shopify,simon.png
+"Archer, a distributed computing platform for media processing",8/31/17,13:20,8/31/17,14:00,Presentation,Level 2 - 210AE,Frank San Miguel:Naveen Mareddy,Netflix:Netflix,frank.png:naveen.png
+"Using Apache Beam for batch, streaming, and everything in between",8/31/17,13:20,8/31/17,14:00,Presentation,Level 2 - 210CG,Reuven Lax,Google,reuven.png
+Building Live With,8/31/17,14:10,8/31/17,14:50,Presentation,Level 2 - 210AE,Nick Ruff,Facebook ,nick.png
+GPUs and deep learning,8/31/17,14:10,8/31/17,14:50,Presentation,Level 2 - 210BF,Robert Ober,NVIDIA,robert.png
+"PerfEnforce: A dynamic scaling engine for analytics with performance guarantees",8/31/17,14:10,8/31/17,14:50,Presentation,Level 2 - 210CG,Magda Balazinska,University of Washington  ,magda.png
+Keeping 2 billion lines of code moving forward,8/31/17,14:10,8/31/17,14:50,Presentation,Level 2 - 210DH,Collin Winter,Google,collin.png
+Democratizing the real-time filming and editing of 3D content,8/31/17,15:15,8/31/17,15:55,Presentation,Level 2 - 210AE,Adam Myhill,Unity  ,adam.png
+Achieving AI @Scale on Mobile Devices,8/31/17,15:15,8/31/17,15:55,Presentation,Level 2 - 210BF,Jeff Gehlhaar,Qualcomm,jeff.png
+Serverless at scale with Amazon DynamoDB and Lambda,8/31/17,15:15,8/31/17,15:55,Presentation,Level 2 - 210CG,Krishnan Seshadrinathan,Amazon,krishnan.png
+Adobe - TBC,8/31/17,15:15,8/31/17,15:55,Presentation,Level 2 - 210DH,Trent Davies,Adobe,trent.jpg
+Deep learning trends and developments,8/31/17,16:05,8/31/17,16:45,Presentation,Level 2 - 210BF,Rajat Monga,Google,rajat.png
+Okta's secret sauce for dealing with flaky tests at scale,8/31/17,16:05,8/31/17,16:45,Presentation,Level 2 - 210DH,Kelvin Zhu,Okta,kelvin.png
+Make data-driven decisions faster with real-time stream processing,8/31/17,16:05,8/31/17,16:45,Presentation,Level 2 - 210CG,Rajesh Nishtala,Facebook,rajesh.png
+Google Translate: Breaking language barriers in emerging markets,8/31/17,16:05,8/31/17,16:45,Presentation,Level 2 - 210AE,Barak Turovsky,Facebook,barak.png
+Rapid release at massive scale,8/31/17,16:55,8/31/17,17:35,Presentation,Level 2 - 210DH,Chuck Rossi,Facebook,chuck.png
+BigQuery: Managed storage for analytics,8/31/17,16:55,8/31/17,17:35,Presentation,Level 2 - 210CG,Jordan Tigani,Google,jordan.png
+Unlocking meaning across languages at scale,8/31/17,16:55,8/31/17,17:35,Presentation,Level 2 - 210BF,Nacip Fazil Ayan,Facebook,nacip.png
+Efficient and healthy background data prefetching sessions,8/31/17,16:05,8/31/17,16:45,Presentation,Level 2 - 210AE,Lola Priego,Instagram,lola.png
+Student Program Breakfast,8/31/17,9:00,8/31/17,9:45,Presentation,Level 2 - Student,Nam Nguyen:Surupa Biswas,Facebook:Facebook,nam.png:surupa.png
+Student Program Lunch,8/31/17,12:25,8/31/17,12:55,Presentation,Level 2 - Student,Jay Parikh:Vaughn Washington:Dario Garcia Garcia,Facebook:Facebook:Facebook,jay.png:vaughn.png:dario.png
+Data Office Hours,8/31/17,12:20,8/31/17,13:20,Office Hours,Data Office Hours,Mark Marchukov,Facebook,mark.png
+Data Office Hours,8/31/17,14:50,8/31/17,15:15,Office Hours,Data Office Hours,Magda Balazinska,University of Washington  ,magda.png
+Data Office Hours,8/31/17,17:35,8/31/17,18:30,Office Hours,Data Office Hours,Jordan Tigani,Google,jordan.png
+Dev Tools Office Hours,8/31/17,12:20,8/31/17,13:20,Office Hours,Dev Tools Office Hours,Kai Maetzel,Microsoft  ,kai.png
+Dev Tools Office Hours,8/31/17,14:50,8/31/17,15:15,Office Hours,Dev Tools Office Hours,Collin Winter,Google,collin.png
+Dev Tools Office Hours,8/31/17,17:35,8/31/17,18:30,Office Hours,Dev Tools Office Hours,Chuck Rossi,Facebook,chuck.png
+Hot Topics Office Hours,8/31/17,12:20,8/31/17,13:20,Office Hours,Hot Topics Office Hours,Julia Grace:S. Soma Somasegar:Sri Viswanath:Julie Pearl:Nam Nguyen,Slack:Madrona Venture Group :Atlassian:Nest:Facebook,julia.png:soma.png:sri.png:julie.png:nam.png
+Hot Topics Office Hours,8/31/17,14:50,8/31/17,15:15,Office Hours,Hot Topics Office Hours,Nick Ruff,Facebook,nick.png
+Hot Topics Office Hours,8/31/17,17:35,8/31/17,18:30,Office Hours,Hot Topics Office Hours,Shane Nay,Facebook,shane.png
+Machine Learning Office Hours,8/31/17,12:20,8/31/17,13:20,Office Hours,Machine Learning Office Hours,Shubha Nabar,Salesforce,shubha.png
+Machine Learning Office Hours,8/31/17,14:50,8/31/17,15:15,Office Hours,Machine Learning Office Hours,Robert Ober,NVIDIA,robert.png
+Machine Learning Office Hours,8/31/17,17:35,8/31/17,18:30,Office Hours,Machine Learning Office Hours,Nacip Fazil Ayan,Facebook,nacip.png

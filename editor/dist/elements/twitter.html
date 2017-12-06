@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/build.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="http://momentjs.com/downloads/moment.min.js"></script>
+    <script src="/js/jquery.cookie.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6546274/756308/css/fonts.css" />
+
+    <style type="text/css">
+
+        .twitter {
+            width: 100%;
+        }
+
+        .pic {
+            float: left;
+        }
+
+            .pic img {
+                width: 128px;
+            }
+
+        .twithead {
+            float: left;
+            margin-left: 10px;
+        }
+
+        #fullname {
+            font-family: "Gotham Narrow A", "Gotham Narrow B";
+            font-style: normal;
+            font-weight: 400;
+            color: #000;
+            font-size: 48px;
+        }
+
+        #username {
+            font-family: "Gotham Narrow A", "Gotham Narrow B";
+            font-style: normal;
+            font-weight: 400;
+            color: #000;
+            font-size: 36px;
+        }
+
+        .tweet {
+            margin-top: 15px;
+            width: 90%;
+            font-family: "Gotham Narrow A", "Gotham Narrow B";
+            font-style: normal;
+            font-weight: 400;
+            color: #000;
+            font-size: 36px;
+            clear: both;
+        }
+
+        .twitimg {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+            .twitimg img {
+                max-height: 250px;
+            }
+
+        .announcement {
+            width: 100%;
+        }
+
+        #message_title {
+            font-family: "Gotham Narrow A", "Gotham Narrow B";
+            font-style: normal;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 48px;
+        }
+
+        #message {
+            margin-top: 15px;
+            width: 90%;
+            font-family: "Gotham Narrow A", "Gotham Narrow B";
+            font-style: normal;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 36px;
+            clear: both;
+        }
+
+        #message_img {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+            #message_img img {
+                max-height: 250px;
+            }
+
+        video#bgvid {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url(polina.jpg) no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="page" class="page">
+
+        <div class="item twitter padding-top-0 padding-bottom-0" id="twitter">
+
+            <div class="wrapper">
+
+                <div class="container">
+
+                    <div class="twitter">
+                        <div class="pic">
+                            <img src="http://placehold.it/128x128" id="twitpic" />
+                        </div>
+                        <div class="twithead">
+                            <span id="fullname" class="editContent">{ TWITTER_FULLNAME }</span>
+                            <br />
+                            <span id="username" class="editContent">{ TWITTER_USERNAME }</span>
+                        </div>
+                        <div class="tweet editContent" id="tweet">
+                            { TWEET }
+                        </div>
+                        <div class="twitimg editContent" id="twitimg">
+                            { TWEET_IMG }
+                        </div>
+                    </div>
+
+                </div><!-- /.container -->
+
+            </div><!-- /.wrapper -->
+
+        </div><!-- /.item -->
+
+    </div><!-- /#page -->
+    <!-- Load JS here for greater good =============================-->
+
+    <script type="text/javascript">
+
+        function setDate() {
+
+            $("#current_date").text(moment().format('h:mm a'));
+
+        }
+
+        setInterval(setDate, 1000);
+
+    </script>
+
+    <script src="js/build/build.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+title,start_date,start_time,end_date,end_time,type,venue,speaker_name,speaker_company,speaker_image
+Uber's Data Visualization Stack,8/31/16,11:00,8/31/16,11:25,Presentation,Lower Level 20D,Shan He,Uber,shan_he.jpg
+Real-time Data Compression at Scale,8/31/16,11:30,8/31/16,11:55,Presentation,Lower Level 20D,Yann Collet,Facebook,yann_collet.png
+Unifying Big Data Workloads in Apache Spark,8/31/16,12:00,8/31/16,12:25,Presentation,Lower Level 20D,Matei Zaharia,Databricks,matei-zaharia.jpg
+Data Track Office Hours,8/31/16,12:30,8/31/16,13:00,Office Hours,,,,
+Lunch,8/31/16,12:30,8/31/16,14:00,Lunch,,,,
+Amazon Aurora: An Under-the-hood VIew of a Cloud-scale Relational Database Service,8/31/16,14:00,8/31/16,14:25,Presentation,Lower Level 20D,Debanjan Saha,Amazon,debanjan.jpg
+MyRocks: Space and Write Optimized OLTP Database at Facebook,8/31/16,14:30,8/31/16,14:55,Presentation,Lower Level 20D,Yoshinori Matsunobu,Facebook,yoshinori-matsunobu.jpg
+No Shard Left Behind: APIs for Massive Parallel Efficiency,8/31/16,15:00,8/31/16,15:25,Presentation,Lower Level 20D,Dan Halperin,Google,dan_halperin.png
+Data Track Office Hours,8/31/16,15:30,8/31/16,16:00,Office Hours,,,,
+Machine Learning at Scale: FBLearner Flow,8/31/16,16:00,8/31/16,16:25,Presentation,Lower Level 20D,Pierre Andrews and Aditya Kalro,Facebook,pierre_andrews.png;aditya-kalro.jpg
+Airbnb's Data Evolution: Lessons from Building a World-Class Data Ecosystem,8/31/16,16:30,8/31/16,16:55,Presentation,Lower Level 20D,James Mayfield and Swaroop Jagadish,Airbnb,james_mayfield.jpg;swaroop.jpg
+Ambry: Open Source Scalable Geodistributed Object Store,8/31/16,17:00,8/31/16,17:30,Presentation,Lower Level 20D,Priyesh Narayanan and Holla Gopalakrishna,LinkedIn,priyesh_narayanan.jpg;gopalakrishna_holla.jpg
+Data Track Office Hours,8/31/16,17:30,8/31/16,18:00,Office Hours,,,,
+Happy Hour and DJ,8/31/16,17:00,8/31/16,19:00,Happy Hour and DJ,Lower Level 20D,,,
