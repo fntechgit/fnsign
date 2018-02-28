@@ -209,6 +209,13 @@
                                                     <asp:TextBox runat="server" ID="type" CssClass="form-control" ClientIDMode="Static"/>
                                                 </div>
                                             </div>                             
+
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Sub Type</label>
+                                                <div class="col-md-6">
+                                                    <asp:TextBox runat="server" ID="sub_type" CssClass="form-control" ClientIDMode="Static"/>
+                                                </div>
+                                            </div>
                                             
                                             <div class="form-group">
 												<label class="col-md-3 control-label">Location</label>

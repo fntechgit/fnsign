@@ -107,6 +107,8 @@ namespace fnsignManager
         {
             Terminal t = _terminals.single(Convert.ToInt32(Session["event_id"].ToString()), Convert.ToInt32(Page.RouteData.Values["id"] as string));
 
+            t.title = title.Text;
+
             t.template_id = ddl_template.SelectedIndex > 0 ? (int?) Convert.ToInt32(ddl_template.SelectedValue) : null;
 
             t.deck = ddl_deck.SelectedIndex > 0 ? (int?) Convert.ToInt32(ddl_deck.SelectedValue) : null;
