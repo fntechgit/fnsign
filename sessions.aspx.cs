@@ -35,7 +35,7 @@ namespace fnsignManager
 
                 full_icon = t.full ? "fa-battery-full" : "fa-battery-empty";
 
-                ph_tags.Controls.Add(new LiteralControl("<tr><td data-title=\"Title\">" + t.name + "</td><td data-title=\"Venue\" class=\"hidden-xs hidden-sm\">" + t.venue + "</td><td data-title=\"Attendees\" class=\"hidden-xs hidden-sm\">" + t.goers + "</td><td data-title=\"Speakers\" class=\"hidden-xs hidden-sm\">" + t.speakers + "</td><td data-title=\"Type\">" + t.event_type + "</td><td data-title=\"SubType\">" + t.event_subtype + "</td><td data-title=\"Start\" class=\"text-right\">" + start + "</td><td data-title=\"End\" class=\"text-right\">" + end + "</td><td><a href=\"/sessions/edit/" + t.internal_id + "\" class=\"fa fa-edit\"></a> <a href=\"/sessions/remove/" + t.internal_id + "\" class=\"fa fa-trash-o\"></a> <a href=\"/sessions/toggle-full/" + t.internal_id + "\" class=\"fa " + full_icon + "\"></a></td></tr>"));
+                ph_tags.Controls.Add(new LiteralControl("<tr><td data-title=\"Title\">" + t.name + "</td><td data-title=\"Venue\" class=\"hidden-xs hidden-sm\">" + t.venue + "</td><td data-title=\"Attendees\" class=\"hidden-xs hidden-sm\">" + t.goers + "</td><td data-title=\"Speakers\" class=\"hidden-xs hidden-sm\">" + t.speakers + "</td><td data-title=\"Type\">" + t.event_type + "</td><td data-title=\"Start\" class=\"text-right\">" + start + "</td><td data-title=\"End\" class=\"text-right\">" + end + "</td><td><a href=\"/sessions/edit/" + t.internal_id + "\" class=\"fa fa-edit\"></a> <a href=\"/sessions/remove/" + t.internal_id + "\" class=\"fa fa-trash-o\"></a> <a href=\"/sessions/toggle-full/" + t.internal_id + "\" class=\"fa " + full_icon + "\"></a></td></tr>"));
             }
         }
 

@@ -59,6 +59,7 @@ namespace fnsignManager
             {
                 case "system":
                     event_link.Visible = true;
+                    event_types_link.Visible = true;
                     display_link.Visible = true;
                     user_link.Visible = true;
                     preference_link.Visible = true;

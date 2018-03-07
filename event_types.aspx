@@ -1,6 +1,7 @@
-﻿<%@ Page Title="FNSIGN > Manage Events" Language="C#" MasterPageFile="~/fnsign.master" AutoEventWireup="true" CodeBehind="events.aspx.cs" Inherits="fnsignManager.events" %>
+﻿<%@ Page Title="FNSIGN > Manage Event Types" Language="C#" MasterPageFile="~/fnsign.master" AutoEventWireup="true" CodeBehind="event_types.aspx.cs" Inherits="fnsignManager.event_types" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="navigation_sidebar" runat="server">
@@ -44,7 +45,7 @@
 		                        Announcements
 		                    </a> 
 		                </li>
-                        <li class="nav-parent">
+                        <li class="nav-parent" class="nav-active">
                             <a href="/sessions">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <span>Sessions</span>
@@ -62,13 +63,13 @@
 		                        <span>Assignments</span>
 		                    </a>
 		                </li>
-                        <li id="event_link" runat="server" Visible="false" class="nav-active">
+                        <li id="event_link" runat="server" Visible="false">
 		                    <a href="/events">
 		                        <i class="fa fa-calendar" aria-hidden="true"></i>
 		                        <span>Events</span>
 		                    </a>
 		                </li>
-                        <li id="event_types_link" runat="server" Visible="false">
+                        <li id="event_types_link" runat="server" class="nav-active">
 		                    <a href="/eventtypes">
 		                        <i class="fa fa-calendar" aria-hidden="true"></i>
 		                        <span>Event Types</span>
@@ -98,8 +99,11 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="content_main" runat="server">
     <section role="main" class="content-body">
+        
+        <a href="/eventtypes/add" class="mb-xs mt-xs mr-xs btn btn-success"><i class="fa fa-user"></i> Add Type</a>
+
 		<header class="page-header">
-			<h2>Manage Events</h2>
+			<h2>Event Types</h2>
 					
 			<div class="right-wrapper pull-right">
 				<ol class="breadcrumbs">
@@ -108,7 +112,7 @@
 							<i class="fa fa-tachometer"></i>
 						</a>
 					</li>
-					<li><i class="fa fa-calendar"></i> <span>Events</span></li>
+					<li><i class="fa fa-gears"></i> <span>Event Types</span></li>
 				</ol>
 					
 				<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
@@ -117,8 +121,6 @@
 
 		<!-- start: page -->
 			<section class="panel">
-			    
-                <a href="/events/add" class="mb-xs mt-xs mr-xs btn btn-success"><i class="fa fa-plus-circle"></i> Add New Event</a>
 
 				<header class="panel-heading">
 					<div class="panel-actions">
@@ -126,19 +128,15 @@
 						<a href="#" class="fa fa-times"></a>
 					</div>
 						
-					<h2 class="panel-title">Events</h2>
+					<h2 class="panel-title">Event Types</h2>
 				</header>
 				<div class="panel-body">
 					<table class="table table-no-more table-bordered table-striped mb-none">
 						<thead>
 							<tr>
-								<th>Title</th>
-								<th class="hidden-xs hidden-sm">URL</th>
-								<th class="hidden-xs hidden-sm">API Key</th>
-                                <th class="hidden-xs hidden-sm">Last Update</th>
-								<th class="hidden-xs hidden-sm">Interval</th>
-								<th class="text-right">Start</th>
-								<th class="text-right">End</th>
+                                <th>Title</th>
+                                <th>Id</th>
+								<th class="hidden-xs hidden-sm">BgColor</th>
                                 <th>Actions</th>
 							</tr>
 						</thead>

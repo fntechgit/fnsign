@@ -42,6 +42,11 @@ namespace fnsignManager
             routes.MapPageRoute("events-delete-route", "events/delete/{id}", "~/delete_event.aspx");
             routes.MapPageRoute("events-managers-route", "events/{id}/monitors", "~/event_monitors.aspx");
 
+            routes.MapPageRoute("event-types-manage-route", "eventtypes", "~/event_types.aspx");
+            routes.MapPageRoute("event-types-add-route", "eventtypes/add", "~/add_event_type.aspx");
+            routes.MapPageRoute("event-types-edit-route", "eventtypes/edit/{id}", "~/add_event_type.aspx");
+            routes.MapPageRoute("event-types-delete-route", "eventtypes/remove/{id}", "~/delete_event_type.aspx");
+
             // ####################### SESSIONS SECTION ########################### //
             routes.MapPageRoute("sessions-route", "sessions", "~/sessions.aspx");
             routes.MapPageRoute("sessions-add-route", "sessions/add", "~/add_session.aspx");

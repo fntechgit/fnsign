@@ -10,7 +10,7 @@
 namespace fnsignManager {
     
     
-    public partial class events {
+    public partial class event_types {
         
         /// <summary>
         /// preference_link control.

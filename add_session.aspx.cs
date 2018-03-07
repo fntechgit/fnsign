@@ -66,7 +66,6 @@ namespace fnsignManager
                     end.Text = s.end.ToShortDateString();
                     end_time.Text = s.end.ToShortTimeString();
                     type.Text = s.event_type;
-                    sub_type.Text = s.event_subtype;
                     ddl_location.SelectedValue = s.venue_id.ToString();
                     //speakers.Text = s.speakers;
                     //speaker_companies.Text = s.speaker_companies;
@@ -93,7 +92,6 @@ namespace fnsignManager
             s.start = Convert.ToDateTime(start.Text + " " + start_time.Text);
             s.end = Convert.ToDateTime(end.Text + " " + end_time.Text);
             s.event_type = type.Text;
-            s.event_subtype = sub_type.Text;
             s.venue_id = ddl_location.SelectedValue;
             s.venue = ddl_location.SelectedItem.Text;
             //s.speakers = speakers.Text;

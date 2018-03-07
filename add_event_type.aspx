@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Session" Language="C#" MasterPageFile="~/fnsign.master" AutoEventWireup="true" CodeBehind="add_session.aspx.cs" Inherits="fnsignManager.add_session" %>
+﻿<%@ Page Title="Add Event Type" Language="C#" MasterPageFile="~/fnsign.master" AutoEventWireup="true" CodeBehind="add_event_type.aspx.cs" Inherits="fnsignManager.add_event_type" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!-- Specific Page Vendor CSS -->
@@ -52,13 +52,13 @@
                                 <span>Overlays</span>
                             </a>
                         </li>
-		                <li class="nav-active">
+		                <li>
 		                    <a href="/announcements">
 		                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
 		                        Announcements
 		                    </a> 
 		                </li>
-                        <li class="nav-active">
+                        <li>
                             <a href="/sessions">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <span>Sessions</span>
@@ -80,6 +80,12 @@
 		                    <a href="/events">
 		                        <i class="fa fa-calendar" aria-hidden="true"></i>
 		                        <span>Events</span>
+		                    </a>
+		                </li>
+                        <li id="event_type_link" runat="server" class="nav-active">
+		                    <a href="/eventtypes">
+		                        <i class="fa fa-calendar" aria-hidden="true"></i>
+		                        <span>Event Types</span>
 		                    </a>
 		                </li>
                         <li id="user_link" runat="server" Visible="false">
@@ -107,7 +113,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="content_main" runat="server">
     <section role="main" class="content-body">
 					<header class="page-header">
-						<h2><%= add_edit.ToUpper() %> A SESSION</h2>
+						<h2><%= add_edit.ToUpper() %> AN EVENT TYPE</h2>
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
@@ -117,9 +123,9 @@
 									</a>
 								</li>
                                 <li>
-                                    <a href="/sessions"><i class="fa fa-bullhorn"></i> Sessions</a>
+                                    <a href="/eventtypes"><i class="fa fa-bullhorn"></i> Event Types</a>
                                 </li>
-								<li><i class="fa fa-plus"></i> <span><%= add_edit %> a Session</span></li>
+								<li><i class="fa fa-plus"></i> <span><%= add_edit %> an Event Type</span></li>
 							</ol>
 					
 							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
@@ -129,7 +135,7 @@
                     <asp:Panel runat="server" ID="pnl_success" Visible="false">
                         <div class="alert alert-success">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong>Success!</strong> You have successfully performed an <%= add_edit %> operation for this session!
+                            <strong>Success!</strong> You have successfully performed an <%= add_edit %> operation for this event type!
                         </div>
                     </asp:Panel>
 
@@ -143,109 +149,30 @@
 											<a href="#" class="fa fa-times"></a>
 										</div>
 						
-										<h2 class="panel-title"><%= add_edit %> a Session</h2>
+										<h2 class="panel-title"><%= add_edit %> an Event Type</h2>
 									</header>
 									<div class="panel-body">
 										<div class="form-horizontal form-bordered">
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Event Type Id</label>
+                                                <div class="col-md-6">
+                                                    <asp:TextBox runat="server" ID="event_type_id" CssClass="form-control" ClientIDMode="Static"/>
+                                                </div>
+                                            </div>                  
+
 											<div class="form-group">
 												<label class="col-md-3 control-label" for="search_text">Title</label>
 												<div class="col-md-6">
 												    <asp:TextBox runat="server" ID="title" CssClass="form-control" ClientIDMode="Static" />
-                                                    <asp:HiddenField runat="server" ID="hdn_event_key" Value=""/>
 												</div>
 											</div> 
                                             
                                             <div class="form-group">
-												<label class="col-md-3 control-label">Start</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-calendar"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="start" ClientIDMode="Static" data-plugin-datepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">Start Time</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-clock-o"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="start_time" data-plugin-timepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">End</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-calendar"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="end" ClientIDMode="Static" data-plugin-datepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">End Time</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-clock-o"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="end_time" data-plugin-timepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label">Type</label>
+                                                <label class="col-md-3 control-label">BgColor</label>
                                                 <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="type" CssClass="form-control" ClientIDMode="Static"/>
+                                                    <asp:TextBox runat="server" ID="bgcolor" CssClass="form-control" ClientIDMode="Static"/>
                                                 </div>
                                             </div>                             
-
-                                           <div class="form-group">
-												<label class="col-md-3 control-label">Location</label>
-												<div class="col-md-6">
-												    <asp:DropDownList runat="server" ID="ddl_location">
-                                                    </asp:DropDownList>
-												</div>
-											</div>
-                                            
-                                            <%--<div class="form-group">
-                                                <label class="col-md-3 control-label">Speakers (separate with a colon ":")</label>
-                                                <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="speakers" CssClass="form-control" ClientIDMode="Static" />
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label">Speaker Companies (separate with a colon ":")</label>
-                                                <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="speaker_companies" CssClass="form-control" ClientIDMode="Static" />
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label">Add New Speaker </label>
-                                                <div class="col-md-6">
-                                                    <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                        <asp:FileUpload runat="server" ID="fup_speaker_image" ClientIDMode="Static" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <ul>
-                                                    <asp:PlaceHolder runat="server" ID="ph_current_images"/>
-                                                </ul>
-                                            </div>--%>
 
                                             <div class="form-group">
 												<label class="control-label col-md-3"></label>
