@@ -101,6 +101,7 @@
     <section role="main" class="content-body">
         
         <a href="/eventtypes/add" class="mb-xs mt-xs mr-xs btn btn-success"><i class="fa fa-user"></i> Add Type</a>
+        <a href="/eventtypes/import" class="mb-xs mt-xs mr-xs btn btn-warning"><i class="fa fa-upload"></i> Import</a>
 
 		<header class="page-header">
 			<h2>Event Types</h2>

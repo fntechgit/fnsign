@@ -46,6 +46,7 @@ namespace fnsignManager
             routes.MapPageRoute("event-types-add-route", "eventtypes/add", "~/add_event_type.aspx");
             routes.MapPageRoute("event-types-edit-route", "eventtypes/edit/{id}", "~/add_event_type.aspx");
             routes.MapPageRoute("event-types-delete-route", "eventtypes/remove/{id}", "~/delete_event_type.aspx");
+            routes.MapPageRoute("event-types-import-route", "eventtypes/import", "~/event_types_import.aspx");
 
             // ####################### SESSIONS SECTION ########################### //
             routes.MapPageRoute("sessions-route", "sessions", "~/sessions.aspx");

@@ -134,7 +134,6 @@
 								<th class="hidden-xs hidden-sm">Attendees</th>
                                 <th class="hidden-xs hidden-sm">Speakers</th>
                                 <th class="text-right">Type</th>
-                                <th class="text-right">SubType</th>
 								<th class="text-right">Start</th>
 								<th class="text-right">End</th>
                                 <th>Actions</th>

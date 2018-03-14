@@ -25,6 +25,7 @@ namespace fnsignManager
         private schedInterface.terminals _terminals = new terminals();
         private schedInterface.locations _locations = new schedInterface.locations();
         private schedInterface.templates _templates = new schedInterface.templates();
+        private schedInterface.event_types _types = new schedInterface.event_types();
 
 
         public Int32 event_id = 0;
@@ -51,10 +52,23 @@ namespace fnsignManager
                 ddl_location.DataValueField = "sched_id";
                 ddl_location.DataTextField = "title";
                 ddl_location.DataBind();
-
                 ListItem locationItem = new ListItem("Select Location", "0");
-
                 ddl_location.Items.Insert(0, locationItem);
+
+                var _eventtypes = _types.by_event(event_id);
+                ddl_type.Visible = _eventtypes.Any();
+                type.Visible = !_eventtypes.Any();
+
+                if (_eventtypes.Any())
+                {
+                    ddl_type.DataSource = _types.by_event(event_id);
+                    ddl_type.DataValueField = "title";
+                    ddl_type.DataTextField = "title";
+                    ddl_type.DataBind();
+                    ListItem typeItem = new ListItem("Select Type", "");
+                    ddl_type.Items.Insert(0, typeItem);
+                }
+                
 
                 if (Page.RouteData.Values["id"] != null)
                 {
@@ -66,6 +80,7 @@ namespace fnsignManager
                     end.Text = s.end.ToShortDateString();
                     end_time.Text = s.end.ToShortTimeString();
                     type.Text = s.event_type;
+                    ddl_type.SelectedValue = s.event_type;
                     ddl_location.SelectedValue = s.venue_id.ToString();
                     //speakers.Text = s.speakers;
                     //speaker_companies.Text = s.speaker_companies;
@@ -91,7 +106,7 @@ namespace fnsignManager
             s.name = title.Text;
             s.start = Convert.ToDateTime(start.Text + " " + start_time.Text);
             s.end = Convert.ToDateTime(end.Text + " " + end_time.Text);
-            s.event_type = type.Text;
+            s.event_type = type.Visible ? type.Text : ddl_type.SelectedValue;
             s.venue_id = ddl_location.SelectedValue;
             s.venue = ddl_location.SelectedItem.Text;
             //s.speakers = speakers.Text;

@@ -10,7 +10,7 @@
 namespace fnsignManager {
     
     
-    public partial class add_session {
+    public partial class event_types_import {
         
         /// <summary>
         /// preference_link control.
@@ -40,6 +40,15 @@ namespace fnsignManager {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl event_link;
         
         /// <summary>
+        /// event_types_link control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl event_types_link;
+        
+        /// <summary>
         /// user_link control.
         /// </summary>
         /// <remarks>
@@ -58,85 +67,40 @@ namespace fnsignManager {
         protected global::System.Web.UI.WebControls.Panel pnl_success;
         
         /// <summary>
-        /// title control.
+        /// security_level control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox title;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl security_level;
         
         /// <summary>
-        /// hdn_event_key control.
+        /// import_type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdn_event_key;
+        protected global::System.Web.UI.WebControls.DropDownList import_type;
         
         /// <summary>
-        /// start control.
+        /// url control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox start;
+        protected global::System.Web.UI.WebControls.TextBox url;
         
         /// <summary>
-        /// start_time control.
+        /// api_key control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox start_time;
-        
-        /// <summary>
-        /// end control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox end;
-        
-        /// <summary>
-        /// end_time control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox end_time;
-        
-        /// <summary>
-        /// type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox type;
-        
-        /// <summary>
-        /// ddl_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_type;
-        
-        /// <summary>
-        /// ddl_location control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_location;
+        protected global::System.Web.UI.WebControls.TextBox api_key;
         
         /// <summary>
         /// btn_process control.

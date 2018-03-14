@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Session" Language="C#" MasterPageFile="~/fnsign.master" AutoEventWireup="true" CodeBehind="add_session.aspx.cs" Inherits="fnsignManager.add_session" %>
+﻿<%@ Page Title="Import Event Types" Language="C#" MasterPageFile="~/fnsign.master" AutoEventWireup="true" CodeBehind="event_types_import.aspx.cs" Inherits="fnsignManager.event_types_import" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!-- Specific Page Vendor CSS -->
@@ -40,25 +40,25 @@
 		                        <span>Dashboard</span>
 		                    </a>
 		                </li>
-                        <li>
+                        <li class="nav-parent">
                             <a href="/templates">
                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                 <span>Templates</span>
                             </a>
                         </li>
-                        <li>
+		                <li>
                             <a href="/overlays">
                                 <i class="fa fa-camera" aria-hidden="true"></i>
                                 <span>Overlays</span>
                             </a>
                         </li>
-		                <li class="nav-active">
+                        <li>
 		                    <a href="/announcements">
 		                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
 		                        Announcements
 		                    </a> 
 		                </li>
-                        <li class="nav-active">
+                        <li class="nav-parent">
                             <a href="/sessions">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <span>Sessions</span>
@@ -82,7 +82,13 @@
 		                        <span>Events</span>
 		                    </a>
 		                </li>
-                        <li id="user_link" runat="server" Visible="false">
+                        <li id="event_types_link" runat="server" Visible="false">
+		                    <a href="/eventtypes">
+		                        <i class="fa fa-calendar" aria-hidden="true"></i>
+		                        <span>Event Types</span>
+		                    </a>
+		                </li>
+                        <li id="user_link" runat="server" Visible="false" class="nav-active">
 		                    <a href="/users">
 		                        <i class="fa fa-users" aria-hidden="true"></i>
 		                        <span>Users</span>
@@ -107,7 +113,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="content_main" runat="server">
     <section role="main" class="content-body">
 					<header class="page-header">
-						<h2><%= add_edit.ToUpper() %> A SESSION</h2>
+						<h2>Import Event Types</h2>
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
@@ -117,9 +123,9 @@
 									</a>
 								</li>
                                 <li>
-                                    <a href="/sessions"><i class="fa fa-bullhorn"></i> Sessions</a>
+                                    <a href="/sessions"><i class="fa fa-users"></i> Sessions</a>
                                 </li>
-								<li><i class="fa fa-plus"></i> <span><%= add_edit %> a Session</span></li>
+								<li><i class="fa fa-user"></i> <span>Sessions Import</span></li>
 							</ol>
 					
 							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
@@ -129,10 +135,10 @@
                     <asp:Panel runat="server" ID="pnl_success" Visible="false">
                         <div class="alert alert-success">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong>Success!</strong> You have successfully performed an <%= add_edit %> operation for this session!
+                            <strong>Success!</strong> You have successfully performed imported <%= total_records %> records
                         </div>
                     </asp:Panel>
-
+        
 					<!-- start: page -->
 						<div class="row">
 							<div class="col-lg-12">
@@ -143,122 +149,47 @@
 											<a href="#" class="fa fa-times"></a>
 										</div>
 						
-										<h2 class="panel-title"><%= add_edit %> a Session</h2>
+										<h2 class="panel-title">Event Types Import</h2>
 									</header>
 									<div class="panel-body">
 										<div class="form-horizontal form-bordered">
-											<div class="form-group">
-												<label class="col-md-3 control-label" for="search_text">Title</label>
+										    
+                                            <div class="form-group" id="security_level" runat="server">
+												<label class="col-md-3 control-label">Append or Overwrite</label>
 												<div class="col-md-6">
-												    <asp:TextBox runat="server" ID="title" CssClass="form-control" ClientIDMode="Static" />
-                                                    <asp:HiddenField runat="server" ID="hdn_event_key" Value=""/>
-												</div>
-											</div> 
-                                            
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">Start</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-calendar"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="start" ClientIDMode="Static" data-plugin-datepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">Start Time</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-clock-o"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="start_time" data-plugin-timepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">End</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-calendar"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="end" ClientIDMode="Static" data-plugin-datepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">End Time</label>
-												<div class="col-md-6">
-													<div class="input-group">
-														<span class="input-group-addon">
-															<i class="fa fa-clock-o"></i>
-														</span>
-													    <asp:TextBox runat="server" ID="end_time" data-plugin-timepicker CssClass="form-control" />
-													</div>
-												</div>
-											</div>
-                                            
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label">Type</label>
-                                                <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="type" CssClass="form-control" ClientIDMode="Static"/>
-                                                    <asp:DropDownList runat="server" ID="ddl_type">
-                                                    </asp:DropDownList>
-                                                </div>
-                                            </div>                             
-
-                                           <div class="form-group">
-												<label class="col-md-3 control-label">Location</label>
-												<div class="col-md-6">
-												    <asp:DropDownList runat="server" ID="ddl_location">
+												    <asp:DropDownList runat="server" ID="import_type" data-plugin-multiselect>
+                                                        <asp:ListItem Value="append">Append to Current List of Event Types</asp:ListItem>
+                                                        <asp:ListItem Value="overwrite">Overwrite Current List of Event Types (Replace)</asp:ListItem>
                                                     </asp:DropDownList>
 												</div>
 											</div>
                                             
-                                            <%--<div class="form-group">
-                                                <label class="col-md-3 control-label">Speakers (separate with a colon ":")</label>
-                                                <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="speakers" CssClass="form-control" ClientIDMode="Static" />
-                                                </div>
-                                            </div>
-                                            
                                             <div class="form-group">
-                                                <label class="col-md-3 control-label">Speaker Companies (separate with a colon ":")</label>
-                                                <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="speaker_companies" CssClass="form-control" ClientIDMode="Static" />
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label class="col-md-3 control-label">Add New Speaker </label>
-                                                <div class="col-md-6">
-                                                    <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                        <asp:FileUpload runat="server" ID="fup_speaker_image" ClientIDMode="Static" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <ul>
-                                                    <asp:PlaceHolder runat="server" ID="ph_current_images"/>
-                                                </ul>
-                                            </div>--%>
+												<label class="col-md-3 control-label" for="search_text">Url</label>
+												<div class="col-md-6">
+												    <asp:TextBox runat="server" ID="url" CssClass="form-control" ClientIDMode="Static" />
+												</div>
+											</div>
 
+                                            <div class="form-group">
+												<label class="col-md-3 control-label" for="search_text">Api Key</label>
+												<div class="col-md-6">
+												    <asp:TextBox runat="server" ID="api_key" CssClass="form-control" ClientIDMode="Static" />
+												</div>
+											</div>
+                                            
                                             <div class="form-group">
 												<label class="control-label col-md-3"></label>
 												<div class="col-md-9">
-													<asp:Button runat="server" ID="btn_process" CssClass="mb-xs mt-xs mr-xs btn btn-primary" Text="Submit" OnClick="update" />
+													<asp:Button runat="server" ID="btn_process" CssClass="mb-xs mt-xs mr-xs btn btn-primary" Text="Import" OnClick="import" />
 												</div>
 											</div>
-
+                                            
 										</div>
 									</div>
 								</section>
+                   
+            
 							</div>
 						</div>
 					<!-- end: page -->
