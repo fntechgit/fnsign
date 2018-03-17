@@ -154,7 +154,7 @@ namespace fnsignManager
             hdn_session_location.Value = s.venue;
             hdn_speaker_name.Value = s.speakers;
             hdn_current_server_time.Value = DateTime.Now.ToShortTimeString();
-            hdn_session_category.Value = s.event_type;
+            hdn_session_category.Value = s.event_type.Replace(" ", "-").ToLower();
 
             hdn_next_session_title.Value = next.name;
             hdn_next_session_start_time.Value = next.start.ToShortTimeString();
@@ -174,6 +174,7 @@ namespace fnsignManager
                 hdn_multiple_session_end_time.Value = string.Join(",;", sess.Select(x => x.end.ToShortTimeString()).ToList());
                 hdn_multiple_session_location.Value = string.Join(",;", sess.Select(x => x.venue).ToList());
                 hdn_multiple_speaker_name.Value = string.Join(":;", sess.Select(x => x.speakers).ToList());
+                hdn_multiple_session_category.Value = string.Join(",;", sess.Select(x => x.event_type.Replace(" ","-").ToLower()).ToList());
             }
 
             regular_overlay.Value = Page.RouteData.Values["overlay_id"] as string;

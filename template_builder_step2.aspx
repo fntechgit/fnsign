@@ -581,7 +581,7 @@
         $(document).ready(function() {
             $("#template").css('width', $("#template_width").val() + 'px');
             $("#template").css('height', $("#template_height").val() + 'px');
-            $("#template").css('background-image', "url('/uploads/" + $("#template_bg").val() + "')");
+            $("#template").css('background-image', "url('http://fnsign.azurewebsites.net/uploads/" + $("#template_bg").val() + "')");
         });
 
         function save() {

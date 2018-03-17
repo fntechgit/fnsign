@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="template_builder_live_preview.aspx.cs" Inherits="fnsignManager.template_builder_live_preview" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="template_builder_live_preview.aspx.cs" Inherits="fnsignManager.template_builder_live_preview" %>
 
 <!DOCTYPE html>
 
@@ -30,7 +30,7 @@
 		                                                    
 		<style type="text/css">
 
-			body { width: 1080px; height: 1920px; background-color: #000000; font-family: "Gotham Narrow A", "Gotham Narrow B";font-style: normal;font-weight: 400; font-size: 36px;color: #000000;background-image: url('<%= fnsignUrl %>/uploads/<%= bgimage %>');background-repeat: no-repeat;padding: 0;margin: 0; }	
+			body { width: 1080px; height: 1920px; background-color: #000000; font-family: "Gotham Narrow A", "Gotham Narrow B";font-style: normal;font-weight: 400; font-size: 36px;color: #000000;background-image: url('http://fnsign.azurewebsites.net/uploads/<%= bgimage %>');background-repeat: no-repeat;padding: 0;margin: 0; }	
 			.wrapper { width: 1080px; height: 1920px;padding: 40px;  }
             .theme-options { position: absolute; }
             .fr-marker { visibility: hidden; }
@@ -38,6 +38,11 @@
 
             .repeater { position: relative;float: left;width: 100%;margin-bottom: 0;clear: both;display: block; }
             .repeater:after { clear: both;content: "";display: table;}
+
+		    /*.repeater.Keynote {background-color:#ffd800}
+            .repeater.Expo-Hall-Session {background-color:#4cff00}*/
+            span.Keynote {background-color:#ffd800}
+            span.Expo-Hall-Session {background-color:#4cff00}
 
             #scrolling_size { overflow: hidden; }
             #announcement_ticker { overflow: visible; }
@@ -105,6 +110,7 @@
         <asp:HiddenField runat="server" ID="hdn_multiple_session_end_time"/>
         <asp:HiddenField runat="server" ID="hdn_multiple_session_description"/>
         <asp:HiddenField runat="server" ID="hdn_multiple_speaker_name"/>
+        <asp:HiddenField runat="server" ID="hdn_multiple_session_category" />
 
         <asp:HiddenField runat="server" ID="hdn_group_by_start" />
         <asp:HiddenField runat="server" ID="hdn_group_by_location" />
@@ -260,6 +266,7 @@
                 var session_starts = $("#hdn_multiple_session_start_time").val().split(',;');
                 var session_speakers = $("#hdn_multiple_speaker_name").val().split(':;');
                 var session_locations = $("#hdn_multiple_session_location").val().split(',;');
+                var session_category = $("#hdn_multiple_session_category").val().split(',;');
 
                 $.each(session_titles, function(index, value) {
 
@@ -340,7 +347,12 @@
                         }
                     }
 
-                    $("#hidden #speaker_name").css("top", ($("#hidden #session_title .fr-editor").height() + 5) + "px");
+                    if ($("#hidden #session_title").length) {
+                        $("#hidden #session_title .fr-editor p span").removeClass();
+                        $("#hidden #session_title .fr-editor p span").addClass(session_category[index]);
+                    }
+
+                    ////$("#hidden #speaker_name").css("top", ($("#hidden #session_title .fr-editor").height() + 5) + "px");
 
                     var totalHeight = 0;
 
@@ -358,6 +370,7 @@
 
                     //totalHeight = $("#hidden .ui-resizable").height();
 
+                    ////$("#repeating_panel").append('<div class="repeater ' + session_category[index] + '" style="height: ' + totalHeight + 'px;">' + $("#hidden").html() + '</div>');
                     $("#repeating_panel").append('<div class="repeater" style="height: ' + totalHeight + 'px;">' + $("#hidden").html() + '</div>');
                 });
 

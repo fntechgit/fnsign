@@ -6,3 +6,12 @@ E:\projects\fnsign\fnsignManager\bin\schedInterface.dll
 E:\projects\fnsign\fnsignManager\bin\RestSharp.dll
 E:\projects\fnsign\fnsignManager\bin\schedInterface.pdb
 E:\projects\fnsign\fnsignManager\bin\RestSharp.xml
+D:\Development\Tipit\FNTech\fnsign\bin\fnsignManager.dll.config
+D:\Development\Tipit\FNTech\fnsign\bin\fnsignManager.dll
+D:\Development\Tipit\FNTech\fnsign\bin\fnsignManager.pdb
+D:\Development\Tipit\FNTech\fnsign\bin\schedInterface.dll
+D:\Development\Tipit\FNTech\fnsign\bin\Newtonsoft.Json.dll
+D:\Development\Tipit\FNTech\fnsign\bin\schedInterface.pdb
+D:\Development\Tipit\FNTech\fnsign\obj\Debug\fnsignManager.dll
+D:\Development\Tipit\FNTech\fnsign\obj\Debug\fnsignManager.pdb
+D:\Development\Tipit\FNTech\fnsign\obj\Debug\fnsignManager.csprojResolveAssemblyReference.cache
