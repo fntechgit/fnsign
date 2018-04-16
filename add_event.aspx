@@ -246,6 +246,17 @@
 												    <asp:TextBox runat="server" ID="api_key" CssClass="form-control" ClientIDMode="Static" />
 												</div>
 											</div>
+
+                                            <div class="form-group">
+	                                            <label class="col-md-3 control-label" for="search_text">API Type</label>
+	                                            <div class="col-md-6">
+		                                            <asp:DropDownList ID="ddl_apitype" runat="server">
+                                                      <asp:ListItem value="-1">-- Select API type --</asp:ListItem>
+		                                              <asp:ListItem value="0">OCP Summit api compatible</asp:ListItem>
+		                                              <asp:ListItem value="1">F8 api compatible</asp:ListItem>
+		                                            </asp:DropDownList>
+	                                            </div>
+                                            </div>
                                             
                                             <div class="form-group">
 												<label class="col-md-3 control-label" for="search_text">Twitter Username</label>

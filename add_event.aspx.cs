@@ -64,6 +64,7 @@ namespace fnsignManager
                     ck_fnsign.Checked = ev.overridetime;
                     ck_runtime.Checked = ev.timerun;
                     ddl_timezone.SelectedValue = ev.timezone.ToString();
+                    ddl_apitype.SelectedValue = ev.api_type.ToString();
 
                     if (ev.timewarp != null)
                     {
@@ -168,6 +169,7 @@ namespace fnsignManager
             ev.overridetime = ck_fnsign.Checked;
             ev.timerun = ck_runtime.Checked;
             ev.timezone = Convert.ToInt32(ddl_timezone.SelectedValue);
+            ev.api_type = Convert.ToInt32(ddl_apitype.SelectedValue);
 
             if (is_update)
             {

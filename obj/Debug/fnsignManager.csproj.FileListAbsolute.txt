@@ -15,3 +15,12 @@ D:\Development\Tipit\FNTech\fnsign\bin\schedInterface.pdb
 D:\Development\Tipit\FNTech\fnsign\obj\Debug\fnsignManager.dll
 D:\Development\Tipit\FNTech\fnsign\obj\Debug\fnsignManager.pdb
 D:\Development\Tipit\FNTech\fnsign\obj\Debug\fnsignManager.csprojResolveAssemblyReference.cache
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\bin\fnsignManager.dll.config
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\bin\fnsignManager.dll
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\bin\fnsignManager.pdb
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\bin\schedInterface.dll
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\bin\Newtonsoft.Json.dll
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\bin\schedInterface.pdb
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\obj\Debug\fnsignManager.csprojResolveAssemblyReference.cache
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\obj\Debug\fnsignManager.dll
+D:\Development\Tipit\FNTech\fnsign-dll-SVN-Azure\obj\Debug\fnsignManager.pdb
